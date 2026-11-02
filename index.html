@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>API Playground</h1>
+        <p>A simple REST API testing tool</p>
+    </header>
+
+    <main class="container">
+
+        <section class="request-panel">
+            <div class="request-bar">
+                <select id="method">
+                    <option>GET</option>
+                    <option>POST</option>
+                    <option>PUT</option>
+                    <option>DELETE</option>
+                </select>
+
+                <input
+                    type="text"
+                    id="url"
+                    placeholder="Enter API URL"
+                    value="https://jsonplaceholder.typicode.com/posts/1"
+                >
+
+                <button id="sendBtn">Send</button>
+            </div>
+
+            <h3>Request Body (JSON)</h3>
+            <textarea id="requestBody" placeholder='{"title":"Hello"}'></textarea>
+
+            <h3>Response</h3>
+            <div id="status">Status: Not sent</div>
+            <pre id="response">Your API response will appear here...</pre>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
